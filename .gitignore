@@ -1,0 +1,27 @@
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+.venv-*/
+venv/
+
+# macOS files
+.DS_Store
+
+# Local environment secrets
+.env
+.env.*
+!.env.example
+
+# Generated model binaries
+ml/models/*.joblib
+
+# Generated datasets
+website_outage_dataset/*.csv
+website_outage_dataset/improved_data/
+website_outage_dataset/__pycache__/
+
+# Local backup snapshots
+backups/

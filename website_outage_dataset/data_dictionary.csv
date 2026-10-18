@@ -1,0 +1,32 @@
+column,description,dtype
+timestamp,Observation timestamp at one-minute intervals.,datetime64[ns]
+requests_per_minute,Total HTTP requests during this minute.,int64
+active_users,Simulated concurrent/active users.,int64
+cpu_usage_pct,Simulated CPU utilization percentage.,float64
+memory_usage_pct,Simulated memory utilization percentage.,float64
+latency_ms,Simulated average request latency in milliseconds.,float64
+error_rate_pct,Simulated percentage of failed requests.,float64
+http_5xx_count,Simulated count of HTTP 5xx responses during the minute.,int64
+network_usage_mbps,Simulated network throughput in Mbps.,float64
+database_connections,Simulated open database connections.,int64
+event_type,"Synthetic scenario label; use for analysis/demo only, not model input.",object
+website_status,"Synthetic current state: healthy, degraded, or outage.",object
+anomaly_label,"Synthetic anomaly ground-truth label: 1 anomaly, 0 normal.",int64
+outage_within_30m,Binary target: degraded/outage starts within next 30 minutes.,int64
+risk_label_valid,1 if future 30-minute target is fully observable; 0 for last 30 rows.,int64
+traffic_lag_1m,Requests/minute one minute earlier.,float64
+traffic_lag_5m,Requests/minute five minutes earlier.,float64
+traffic_lag_15m,Requests/minute fifteen minutes earlier.,float64
+traffic_lag_30m,Requests/minute thirty minutes earlier.,float64
+traffic_lag_60m,Requests/minute sixty minutes earlier.,float64
+traffic_rolling_mean_5m,"Mean traffic over previous five observations, excluding current observation.",float64
+traffic_rolling_mean_15m,"Mean traffic over previous fifteen observations, excluding current observation.",float64
+traffic_rolling_std_15m,Standard deviation of traffic over previous fifteen observations.,float64
+traffic_growth_pct_5m,Percentage traffic change relative to five minutes earlier.,float64
+cpu_change_5m,CPU percentage-point change over five minutes.,float64
+latency_change_5m,Latency change in milliseconds over five minutes.,float64
+error_rate_change_5m,Error-rate percentage-point change over five minutes.,float64
+hour,"Hour of day, 0–23.",int32
+day_of_week,"Day of week, Monday=0 through Sunday=6.",int32
+is_weekend,"1 for Saturday/Sunday, otherwise 0.",int64
+minute_of_day,"Minute of day, 0–1439.",int32
