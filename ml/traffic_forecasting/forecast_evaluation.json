@@ -1,0 +1,8 @@
+{
+    "model": "XGBoost",
+    "forecast_horizon_minutes": 30,
+    "test_mae": 150.67484710248002,
+    "test_rmse": 203.94666826298888,
+    "baseline_test_mae": 180.5215427380125,
+    "baseline_test_rmse": 239.6988538508481
+}
